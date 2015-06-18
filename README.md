@@ -1,0 +1,1 @@
+The idea behind this speed comparison is to show the difference in computational time between OpenCOR and MATLAB when used out-of-the-box, i.e. with whatever solver that comes with either of those packages.
