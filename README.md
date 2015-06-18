@@ -37,4 +37,4 @@ Testing protocol:
 
 Conclusions:
  - MATLAB is between ```38``` and ```224``` times slower than OpenCOR.
- - Computational times for OpenCOR range from ```0.65 s``` to ```1.35 s``` while those for MATLAB range from ```29.21 s``` to ```301.29 s```. Such 'low' computational times for OpenCOR means that they might be less accurate. As a result, this speed comparison might play 'in favour of' MATLAB.
+ - Computational times for OpenCOR range from ```0.65 s``` to ```1.35 s``` while those for MATLAB range from ```29.21 s``` to ```301.29 s```. Such 'low' computational times for OpenCOR means that they might be less accurate. As a result, the results of this speed comparison might be to the 'advantage of' MATLAB.
