@@ -14,7 +14,7 @@ Testing environment:
  - Version: R2013a.
  - Solver: ode15s (i.e. a solver suitable for stiff problems and which has low to medium order of accuracy) with both its ```RelTol``` and ```AbsTol``` parameters set to ```1e-7``` and its ```MaxStep``` parameter set to the stimulation duration, if needed.
 
-CellML version of the tested models (with its simulation duration in seconds and, if needed, its stimulation duration in milliseconds):
+CellML version of the tested models (with its simulation duration and, if needed, its stimulation duration):
  - [Bondarenko et al. 2004](http://models.cellml.org/e/41) (```10 s``` / ```0.5 ms```);
  - [Courtemanche et al. 1998](http://models.cellml.org/exposure/0e03bbe01606be5811691f9d5de10b65) (```100 s``` / ```2 ms```; note: the value of ```membrane.stim_end``` was increased so as to get action potentials for the duration of the simulation);
  - [Faber & Rudy 2000](http://models.cellml.org/exposure/55643f2114a2a463ada007deb9fc3913) (```50 s``` / ```2 ms```);
@@ -27,3 +27,10 @@ CellML version of the tested models (with its simulation duration in seconds and
 
 MATLAB version of the tested models:
  - They were generated using the ```Export to MATLAB``` feature in [COR](http://cor.physiol.ox.ac.uk/).
+
+Testing protocol:
+ - Run a model for a given simulation duration.
+ - Generate simulation data every milliseconds.
+ - Only keep track of all the simulation data (i.e. no graphical output).
+ - Run a model ```7``` times, discard the ```2``` slowest runs (to account for unpredictable slowdowns of the testing machine) and average the resulting computational times.
+ - Computational times are obtained directly from OpenCOR and MATLAB (through a couple of calls to ```cputime``` in the case of MATLAB).
